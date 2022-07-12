@@ -14,3 +14,9 @@
       name: apache2
       state: restarted
      when: ansible_os_family=="Debian"
+
+   - name: i want install webserver on RedHatnodes
+     yum:
+       name: httpd
+       state: present
+     when: ansible_os_family=="Debian"
